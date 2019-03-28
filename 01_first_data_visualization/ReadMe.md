@@ -17,14 +17,14 @@ The .xlsx file we receive contain the following variables:
 	- Effect 
 	- Validated effect
 	- G start (chromosome and position)
-	- Ref (Referencial allele)
+	- Ref (Referential allele)
 	- Alt (Alternative allele)
 	- %FP
 	- inROI
-	- Clasification
+	- Classification
 	- Additional risk information
 	- User
-	- CI date (Internal Clasification Data)
+	- CI date (Internal Classification Data)
 	- Intervar
 	- Reasoning
 	- Comments
@@ -44,6 +44,8 @@ The .xlsx file we receive contain the following variables:
 We want to cross Pandora with out internal database and other open databases, to know how many common SNPs have this databases with Pandora. 
 
 Table1. Total number of SNPs in each of the datasets we are going to use.
+
+
 |                            | Total number of SNPs |
 |----------------------------|----------------------|
 | Pandora                    | 45,489               |
@@ -53,6 +55,7 @@ Table1. Total number of SNPs in each of the datasets we are going to use.
 | 1000Genomes (no filter)    | 82,732,419           |
 
 Table2. Total number of SNPs in common between Pandora and the selected databases.
+
 |                                     | Total number of SNPs |
 |-------------------------------------|----------------------|
 | Pandora vs SNParray (maf = 0.01)    | 496                  |
@@ -60,16 +63,17 @@ Table2. Total number of SNPs in common between Pandora and the selected database
 | Pandora vs 1000Genomes (maf = 0.01) | 5,182                |
 | Pandora vs 1000Genomes (no filter)  | 15,340               |
 
+
 This results show a small percentage of shared SNPs between Pandora and the other datasets, but this can have an explanation. 
 
-One important point is that the other datasets are very general in comparisson with Pandora. That means Pandora dataset includes only 135 genes but a lot of variants (and in general rare variants) for this genes. In the other databases we have a lot of genes but small number of variants per gene, this is easy to see in the SNPs positions, if this positions are very close, as in Pandora, that means we have a lot of close variants.
+One important point is that the other datasets are very general in comparison with Pandora. That means Pandora dataset includes only 135 genes but a lot of variants (and in general rare variants) for this genes. In the other databases we have a lot of genes but small number of variants per gene, this is easy to see in the SNPs positions, if this positions are very close, as in Pandora, that means we have a lot of close variants.
 
-In other hand we are using fitered data: we have filters by minor allele frequency (maf) > 0.01, which means the rare SNPs where deleted, but in Pandora we have all the data without filters. Also the imputed filtered data have been filtered by info > 0.7. A histogram was made in order to see the info distribution of the common alleles. 
+In other hand we are using filtered data: we have filters by minor allele frequency (maf) > 0.01, which means the rare SNPs where deleted, but in Pandora we have all the data without filters. Also the imputed filtered data have been filtered by info > 0.7. A histogram was made in order to see the info distribution of the common alleles. 
 
-We also perform a PCA analysis in order to know if we loose the differenciation capacity of the SNPs between population, when we select the common SNPs between Pandora and 1000Genomes. The results shows a wide lost of differenciation capacity but still we can be able to differenciate between populations.
+We also perform a PCA analysis in order to know if we loose the differentiation capacity of the SNPs between population, when we select the common SNPs between Pandora and 1000Genomes. The results shows a wide lost of differentiation capacity but still we can be able to differentiate between populations.
 
-![1000Genomes PCA](../graphs/1000G_PCA.png)
+![1000Genomes PCA](/graphs/1000G_PCA.png)
 
-![Common Pandora and 1000Genomes SNPs PCA](https://github.com/BeatrizCortes/Final-Grade-Project/tree/master/graphs/1000G_PCA.png)
+![Common Pandora and 1000Genomes SNPs PCA](/graphs/1000G_PCA.png)
 
 
