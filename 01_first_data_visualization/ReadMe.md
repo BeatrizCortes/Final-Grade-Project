@@ -68,12 +68,12 @@ This results show a small percentage of shared SNPs between Pandora and the othe
 
 One important point is that the other datasets are very general in comparison with Pandora. That means Pandora dataset includes only 135 genes but a lot of variants (and in general rare variants) for this genes. In the other databases we have a lot of genes but small number of variants per gene, this is easy to see in the SNPs positions, if this positions are very close, as in Pandora, that means we have a lot of close variants.
 
-![SNPs per gene in Pandora](/graphs/genes_in_pandora.png)
+![SNPs per gene in Pandora](graphs/genes_in_pandora.png)
 
 In other hand we are using filtered data: we have filters by minor allele frequency (maf) > 0.01, which means the rare SNPs where deleted, but in Pandora we have all the data without filters. To see if this is significant a histogram of the *in house frequency* variable was plotted. 
 
 
-![In house frequency hisogram](/graphs/Inhousefreq_histogram.png)
+![In house frequency hisogram](graphs/Inhousefreq_histogram.png)
 
 In Pandora we have a lot of rare variants:
 
@@ -83,13 +83,13 @@ In Pandora we have a lot of rare variants:
 
 Also the imputed filtered data have been filtered by info > 0.7. A histogram was made in order to see the info distribution of the common alleles (the info is a quality measure for the imputation).
 
-![Common Pandora and Imputed SNPs info histogram](/graphs/PandoraSNPs_vs_GCATimputed.png)
+![Common Pandora and Imputed SNPs info histogram](graphs/PandoraSNPs_vs_GCATimputed.png)
 
 We also perform a PCA analysis in order to know if we loose the differentiation capacity of the SNPs between population, when we select the common SNPs between Pandora and 1000Genomes. The results shows a wide lost of differentiation capacity but still we can be able to differentiate between populations.
 
-![1000Genomes PCA](/graphs/1000G_PCA.png)
+![1000Genomes PCA](graphs/1000G_PCA.png)
 
-![Common Pandora and 1000Genomes SNPs PCA](/graphs/1000G_PCA.png)
+![Common Pandora and 1000Genomes SNPs PCA](graphs/1000G_PCA.png)
 
 After made the same comparisson between Pandora and 1000Genomes but without the maf filter we found an increase in the number of SNPs but still have 2/3 of Pandora SNPs without coincidence in the 1000Genomes dataset. The repetition of the PCA shows similar results. 
 
@@ -101,11 +101,11 @@ In the case of found the same variant in more than one panel we will select the 
 
 Finally 17,252 unique SNPs were found, and most of them with high info (9,687 with info higher than 0.7).
 
-![Common Pandora vs 4th panels info](/graphs/info_4panels.png)
+![Common Pandora vs 4th panels info](graphs/info_4panels.png)
 
 We also check the maf and found that 7,561 common SNPs have maf = 00, that means this is a monomorphic position, and from this monomorphic sites 2,208 have a very high info (info > 0.7).
 
-![Common Pandora vs 4th panels maf](/graphs/maf_4panels.png)
+![Common Pandora vs 4th panels maf](graphs/maf_4panels.png)
 
 We also studied the genes and their length and proximity between them, trying to guess if we can find groups of genes but nothing relevant was found.
 
