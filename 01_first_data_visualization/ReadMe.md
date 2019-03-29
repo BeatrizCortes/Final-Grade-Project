@@ -89,7 +89,7 @@ We also perform a PCA analysis in order to know if we loose the differentiation 
 
 ![1000Genomes PCA](graphs/1000G_PCA.png)
 
-![Common Pandora and 1000Genomes SNPs PCA](graphs/1000G_PCA.png)
+![Common Pandora and 1000Genomes SNPs PCA](graphs/PandoraSNPs_1000Genomes.png)
 
 After made the same comparisson between Pandora and 1000Genomes but without the maf filter we found an increase in the number of SNPs but still have 2/3 of Pandora SNPs without coincidence in the 1000Genomes dataset. The repetition of the PCA shows similar results. 
 
