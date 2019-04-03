@@ -2,7 +2,7 @@
 
 In this part we are going to extract the variants of inteest from the four panels in order to have the data subset to impute with Pandora. 
 
-We are going to select the variants of interest, which we select and save into a file *intersection_snps.txt" in the first part *01_first_data_visualization*. This file contain the information about the common variants between Pandora and the four databases. The file format is the following:
+We are going to select the variants of interest, which we select and save into a file *intersection_snps.txt" in the first part *01_first_data_visualization*. This file contain the information about the common variants between Pandora and the four databases. The file contain the following variables:
 
    - **snp_id**
    - rs_id
