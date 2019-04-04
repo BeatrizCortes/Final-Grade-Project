@@ -73,7 +73,7 @@ The variables it contain are the following, the most important are the bold:
 
 ## Data management
 
-We are going to focus only on the samples with tissue equal to blood, which means that from the 2628 total samples we are going to focus in 2142 belonging to this tissue. 
+We are going to focus only on the samples with tissue equal to blood and DNA (which contain the GCAT control samples), which means that from the 2628 total samples we are going to focus in 2142 belonging to this tissue. 
 We also want to take into account another filter for the SNPs which is the **jointQualityScore**, that is a measure of quality, we consider valid data the ones with a lowest value than 4.
 
 So, we search in all.samples, all the 2628 samples the ones from Blood and then cross with all.vars and search the list correpondent to this **sampleId**. With this information of the variables we filter it with **jointQualityScore** > 4, and with a auxiliar function we obtain the genotypes from the **freq** variable. Finally, we 
@@ -88,7 +88,13 @@ We repeat this process for all the samples and then make a merge to obtain the d
 |      1     | 17****87 | 17****87 |        T       |         C        |        7**7       |   1/1   |   1/1   |   1/1   | ... |
 |     ...    |    ...   |    ...   |       ...      |        ...       |        ...        |   ...   |   ...   |   ...   | ... |
 
-This table have 35893 rows, which is the number of SNPs analyzed, and 2246 columns which are 6 variables + 2240 samples. 
+This table have 35893 rows, which is the number of SNPs analyzed, and 2246 columns which are 6 variables + 2431 samples. This data contains 1957 cases and 238 controls.
+
+We have an important variable that is the clasification of the samples, we have the following samples for each clasification (cascade.polides):
+
+| All genes | **Breast** | HBOC | Melanoma | **Ovary** | BC/OC/HBOC + Other | **Control** | HNPCC | Other | Polyposis |
+|-----------|:------:|-----:|----------|-------|--------------------|---------|-------|-------|-----------|
+| 41        |   813  |  199 | 58       | 292   | 48                 | 238     | 190   | 118   | 198       |
 
 We also create another file which contain the key information of the samples, which will help us to know the clasification and the type of sample.
 
