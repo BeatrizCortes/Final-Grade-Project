@@ -21,4 +21,4 @@ A repository where I will include all the scripts used during the development of
    <br/>
    
 4. **Merge datasets**
-   *We prepare the data from Pandora and from the Subset previously obtained in order to merge them into a unique file with the information of all the selected variants (13718) and all the samples (16545).
+   *We prepare the data from Pandora and from the Subset previously obtained in order to merge them into a unique file with the information of all the selected variants (13718) and all the samples (16545).*
