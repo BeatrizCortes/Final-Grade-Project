@@ -10,10 +10,10 @@ A repository where I will include all the scripts used during the development of
    
 2. **Pandora data preparation**
    *We extract the important information from the four tables given to us and preparation of the information of samples, SNPs, genotypes...*
-   
+   *We check the number of genes by chromosome and the position of the genes in the different chromosomes.*
+      
    <br/>
    
-   *We check the number of genes by chromosome and the position of the genes in the different chromosomes.*
 3. **GCAT subset variants imputed**
    *We extract the variants of interest determined on the first data visualization from the four panels, taking the ones with the higher info.*
    
