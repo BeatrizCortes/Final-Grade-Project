@@ -10,6 +10,7 @@ A repository where I will include all the scripts used during the development of
    
 2. **Pandora data preparation**
    *We extract the important information from the four tables given to us and preparation of the information of samples, SNPs, genotypes...*
+   
    *We check the number of genes by chromosome and the position of the genes in the different chromosomes.*
       
    <br/>
