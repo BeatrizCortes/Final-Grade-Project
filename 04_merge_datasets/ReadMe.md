@@ -33,7 +33,7 @@ In order to merge the two datasets we need to:
   Then we transform this 1/1, 1/0, 0/0 or missing into three columns with its correspondent value. 
 <br/><br/>
 
-**Finally, when we have all this we can merge the samples into a file my_final_genotypes with 13718 sNPs and 16545 samples. The format of the output file is:**
+**Finally, when we have all this we can merge the samples into a file my_final_genotypes with 13718 sNPs and ??? samples. The format of the output file is:**
 
 | 10  | rs3818470:104263675:T:C | 104263675 | T   | C   | 0   | 1   | ... |
 |-----|:-----------------------:|----------:|-----|-----|-----|-----|-----|
