@@ -1,5 +1,5 @@
 
-## 06 GWAS PREPARATION                                                               
+## 06. GWAS PREPARATION                                                               
 
 First we had to modify the psam file to add the information of control/case for each cancer type. 
 
