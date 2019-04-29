@@ -14,10 +14,10 @@ We have the following cancer types:
 - Ovary                  -> Ovary
 
 We have 4 different cathegories:
-- **pheno**: include all the SNPs, 1 = control (GCAT) and 2 = case. **6569 variants**
-- **ovarian**: 1 = control (GCAT), 2 = ovarian classified patients, NA = other cancer patients. **5412 variants**
-- **breast**: 1 = control (GCAT), 2 = breast classified patients, NA = other cancer patients. **5819 variants**
-- **colon**: 1 = control (GCAT), 2 = colon classified patients, NA = other cancer patients. **5307 variants**
+- **pheno**: include all the SNPs, 1 = control (GCAT) and 2 = case. **6569 samples**
+- **ovarian**: 1 = control (GCAT), 2 = ovarian classified patients, NA = other cancer patients. **5412 samples**
+- **breast**: 1 = control (GCAT), 2 = breast classified patients, NA = other cancer patients. **5819 samples**
+- **colon**: 1 = control (GCAT), 2 = colon classified patients, NA = other cancer patients. **5307 samples**
 
 Then we perform 4 different GWAS one with each group, and made Manhattan plots in order to visualize it. 
 
