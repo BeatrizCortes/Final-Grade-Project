@@ -1,4 +1,4 @@
-## 5. GWAS
+## 5. GWAS Preparation
 
 ### General checking: GCAT + Pandora
 
