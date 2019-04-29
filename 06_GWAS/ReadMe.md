@@ -5,13 +5,13 @@ First we had to modify the psam file to add the information of control/case for 
 
 We have the following cancer types:
 
-Control                -> Control 
-Breast                 -> Breast
-Polyposis              -> Colon
-BC/OC/HBOC + Other     -> Breast + Ovary 
-HNPCC                  -> Colon
-HBOC                   -> Breast + Ovary
-Ovary                  -> Ovary
+- Control                -> Control 
+- Breast                 -> Breast
+- Polyposis              -> Colon
+- BC/OC/HBOC + Other     -> Breast + Ovary 
+- HNPCC                  -> Colon
+- HBOC                   -> Breast + Ovary
+- Ovary                  -> Ovary
 
 We have 4 different cathegories:
 - **pheno**: include all the SNPs, 1 = control (GCAT) and 2 = case. **6569 variants**
