@@ -27,9 +27,9 @@ We obtain the following correlated SNPs:
 - **breast**: 318 SNPs belonging to 94 genes.
 - **colon**: 153 SNPs belonging to 69 genes. 
 
-![Ovarian GWAS](graphs/general.png)
+![General GWAS](graphs/general.png)
 
-![General GWAS](graphs/general_ovarian.png)
+![Ovarian GWAS](graphs/general_ovarian.png)
 
 ![Breast GWAS](graphs/general_breast.png)
 
@@ -72,6 +72,33 @@ This table summarize the correlated SNPs and genes information with this analysi
 |  Breast |          318         |           94          | 248                 | 81                   |
 |  Colon  |          153         |           69          | 91                  | 49                   |
 
+Manhattan plots with teh training dataset:
+
+![General GWAS](graphs/70_general.png)
+
+![Ovarian GWAS](graphs/70_general_ovarian.png)
+
+![Breast GWAS](graphs/70_general_breast.png)
+
+![Colon GWAS](graphs/70_general_colon.png)
+
+We also obtain visual information of the correlated SNPs with manhattan plots by chromosome and cancer type:
+
+Chromosome 2, for General:
+
+![General 70 GWAS, chromosme 2](graphs/70_Chr2_manhattan.png)
+
+Chromosome 2, for Ovarian Cancer:
+
+![Ovarian 70 GWAS, chromosme 2](graphs/70_Chr2_manhattan_ovarian.png)
+
+Chromosome 2, for Breast Cancer:
+
+![Breast 70 GWAS, chromosme 2](graphs/70_Chr2_manhattan_breast.png)
+
+Chromosome 2, for Colon Cancer:
+
+![Colon 70 GWAS, chromosme 2](graphs/70_Chr2_manhattan_colon.png)
 
 
 
