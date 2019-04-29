@@ -63,6 +63,16 @@ We repeat the GWAS with this 70% subset that means we have the following samples
 ![Venn Diagram](graphs/70_VennDiagram.png)
 
 
+This table summarize the correlated SNPs and genes information with this analysis we made:
+
+|         | Correlated SNPs 100% | Correlated genes 100% | Correlated SNPs 70% | Correlated genes 70% |
+|:-------:|:--------------------:|:---------------------:|---------------------|----------------------|
+| General |          412         |          101          | 323                 | 92                   |
+| Ovarian |          188         |           74          | 139                 | 63                   |
+|  Breast |          318         |           94          | 248                 | 81                   |
+|  Colon  |          153         |           69          | 91                  | 49                   |
+
+
 
 
 
