@@ -51,5 +51,25 @@ Finally we have the **.psam** file with the following format:
 | 4    | AAA323**** | 2   | 2     | 1       | NA     | 1     | 2        | NA       | 1          | 1          | 2         | 2         | 2        | NA       |
 | ...  | ...        | ... | ...   | ...     | ...    | ...   | ...      | ...      | ...        | ...        | ...       | ...       | ...      | ...      |
 
+We repeat the GWAS with this 70% subset that means we have the following samples per set:
+
+|         | Training set (70%) | Test set (30%) |
+|:-------:|:------------------:|:--------------:|
+| General |        4598        |      1971      |
+| Ovarian |        3801        |      1611      |
+|  Breast |        4076        |      1743      |
+|  Colon  |        3708        |      1599      |
+
+![Venn Diagram](graphs/70_VennDiagram.png)
+
+
+
+
+
+
+
+
+
+
 
 
