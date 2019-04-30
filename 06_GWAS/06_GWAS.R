@@ -162,7 +162,7 @@ system(paste0(" /imppc/labs/dnalab/share/PRS/03_GCAT_subset_variants_imputed/pli
               " --pvar /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.pvar ",
               " --psam /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.psam ",
               " --pheno-name pheno ",
-              " --glm firth ", # help to order the betas to take into accound not balanced cases
+              " --glm firth ", # help to order the betas to take into account not balanced cases
               " --maf 0.01 ", 
               " --out /imppc/labs/dnalab/share/PRS/06_GWAS/outputs_plink/first_final_subset"))
 
@@ -206,7 +206,7 @@ system(paste0(" /imppc/labs/dnalab/share/PRS/03_GCAT_subset_variants_imputed/pli
               " --pvar /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.pvar ",
               " --psam /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.psam ",
               " --pheno-name ovarian ",
-              " --glm firth ", # help to order the betas to take into accound not balanced cases
+              " --glm firth ", # help to order the betas to take into account not balanced cases
               " --maf 0.01 ", 
               " --out /imppc/labs/dnalab/share/PRS/06_GWAS/outputs_plink/first_final_subset"))
 
@@ -224,7 +224,7 @@ colnames(gwas_manhattan_O) = c("SNP","CHR","BP","P")
 
 png("graphs/Ovarian_GWAS/general_ovarian.png")
   manhattan(gwas_manhattan_O)
-  title("All samples Ovarian")
+  title("Ovarian samples")
 dev.off()
 
 # Loop to make the plots
@@ -246,7 +246,7 @@ system(paste0(" /imppc/labs/dnalab/share/PRS/03_GCAT_subset_variants_imputed/pli
               " --pvar /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.pvar ",
               " --psam /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.psam ",
               " --pheno-name breast ",
-              " --glm firth ", # help to order the betas to take into accound not balanced cases
+              " --glm firth ", # help to order the betas to take into account not balanced cases
               " --maf 0.01 ", 
               " --out /imppc/labs/dnalab/share/PRS/06_GWAS/outputs_plink/first_final_subset"))
 
@@ -264,7 +264,7 @@ colnames(gwas_manhattan_C) = c("SNP","CHR","BP","P")
 
 png("graphs/Breast_GWAS/general_breast.png")
 manhattan(gwas_manhattan_C)
-title("All samples")
+title("Breast samples")
 dev.off()
 
 # Loop to make the plots
@@ -286,7 +286,7 @@ system(paste0(" /imppc/labs/dnalab/share/PRS/03_GCAT_subset_variants_imputed/pli
               " --pvar /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.pvar ",
               " --psam /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.psam ",
               " --pheno-name colon ",
-              " --glm firth ", # help to order the betas to take into accound not balanced cases
+              " --glm firth ", # help to order the betas to take into account not balanced cases
               " --maf 0.01 ", 
               " --out /imppc/labs/dnalab/share/PRS/06_GWAS/outputs_plink/first_final_subset"))
 
@@ -304,7 +304,7 @@ colnames(gwas_manhattan_C) = c("SNP","CHR","BP","P")
 
 png("graphs/Colon_GWAS/general_colon.png")
 manhattan(gwas_manhattan_C)
-title("All samples")
+title("Colon samples")
 dev.off()
 
 # Loop to make the plots
@@ -469,7 +469,6 @@ breast_variants %>% write.table("breast_variants.txt",
 colon_variants %>% write.table("colon_variants.txt",
                                row.names = F,col.names = F,quote = F)
 
-
 #### TRANING AND TEST DATA ####
 
 head(psam)
@@ -524,3 +523,307 @@ psam$colon_30[-my_sample] = psam$colon[-my_sample]
 # Write the psam 
 write.table(psam,"../05_GWAS/outputs_plink/first_final_subset.psam",
             quote = F,row.names = F)
+
+######################################################################
+## GWAS on the 70% Training sample                                  ##
+######################################################################
+
+# GENERAL ANALYSIS 70 % # 
+system(paste0(" /imppc/labs/dnalab/share/PRS/03_GCAT_subset_variants_imputed/plink2 ",
+              " --pgen /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.pgen ",
+              " --pvar /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.pvar ",
+              " --psam /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.psam ",
+              " --pheno-name pheno_70 ",
+              " --glm firth ", 
+              " --maf 0.01 ", 
+              " --out /imppc/labs/dnalab/share/PRS/06_GWAS/outputs_plink/first_final_subset"))
+
+gwas_general_70 = fread("/imppc/labs/dnalab/share/PRS/06_GWAS/outputs_plink/first_final_subset.pheno_70.glm.firth")
+
+head(gwas_general_70)
+
+# Create the gwas_manhattan with the columns we need 
+gwas_manhattan = gwas_general_70 %>% dplyr::select(ID,`#CHROM`,POS,P)
+# Change the columns name
+colnames(gwas_manhattan) = c("SNP","CHR","BP","P")
+
+# Make the general GWAS
+# dir.create("graphs/General_GWAS")
+
+png("graphs/General_GWAS/70_general.png")
+manhattan(gwas_manhattan)
+title("All samples")
+dev.off()
+
+# Loop to make the plots
+
+# First we need to create the vector with the chromosomes names:
+chromosomes = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+                "11", "12", "13", "14", "15", "16", "17", "18", "19", 
+                "22")
+
+for (c in chromosomes){
+  png(paste0("graphs/General_GWAS/70_Chr", c ,"_manhattan.png"))
+  manhattan(gwas_manhattan %>% filter(CHR == as.integer(c)))
+  dev.off()
+}
+
+# check the correlated
+general_variants2 = gwas_general_70 %>% filter(P<1e-6)
+dim(general_variants2) #373 in the 100% was 412 
+
+# OVARIAN ANALYSIS 70% # 
+# we want now analyze by OVARIAN
+system(paste0(" /imppc/labs/dnalab/share/PRS/03_GCAT_subset_variants_imputed/plink2 ",
+              " --pgen /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.pgen ",
+              " --pvar /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.pvar ",
+              " --psam /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.psam ",
+              " --pheno-name ovarian_70 ",
+              " --glm firth ", # help to order the betas to take into account not balanced cases
+              " --maf 0.01 ", 
+              " --out /imppc/labs/dnalab/share/PRS/06_GWAS/outputs_plink/first_final_subset"))
+
+gwas_O_70 = fread("/imppc/labs/dnalab/share/PRS/06_GWAS/outputs_plink/first_final_subset.ovarian_70.glm.firth")
+
+head(gwas_O_70)
+
+# Create the gwas_manhattan with the columns we need 
+gwas_manhattan_O = gwas_O_70 %>% dplyr::select(ID,`#CHROM`,POS,P)
+# Change the columns name
+colnames(gwas_manhattan_O) = c("SNP","CHR","BP","P")
+
+# Make the general GWAS
+# dir.create("graphs/Ovarian_GWAS")
+
+png("graphs/Ovarian_GWAS/70_general_ovarian.png")
+manhattan(gwas_manhattan_O)
+title("Ovarian samples")
+dev.off()
+
+# Loop to make the plots
+
+for (c in chromosomes){
+  png(paste0("graphs/Ovarian_GWAS/70_Chr", c ,"_manhattan_ovarian.png"))
+  manhattan(gwas_manhattan_O %>% filter(CHR == as.integer(c)))
+  dev.off()
+}
+
+# check the correlated
+ovarian_variants2 = gwas_O_70 %>% filter(P<1e-6) 
+dim(ovarian_variants2) #169 in the 100% case was 188 
+
+# BREAST ANALYSIS # 
+# we want now analyze by Breast
+system(paste0(" /imppc/labs/dnalab/share/PRS/03_GCAT_subset_variants_imputed/plink2 ",
+              " --pgen /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.pgen ",
+              " --pvar /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.pvar ",
+              " --psam /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.psam ",
+              " --pheno-name breast_70 ",
+              " --glm firth ", # help to order the betas to take into account not balanced cases
+              " --maf 0.01 ", 
+              " --out /imppc/labs/dnalab/share/PRS/06_GWAS/outputs_plink/first_final_subset"))
+
+gwas_B_70 = fread("/imppc/labs/dnalab/share/PRS/06_GWAS/outputs_plink/first_final_subset.breast_70.glm.firth")
+
+head(gwas_B_70)
+
+# Create the gwas_manhattan with the columns we need 
+gwas_manhattan_C = gwas_B_70 %>% dplyr::select(ID,`#CHROM`,POS,P)
+# Change the columns name
+colnames(gwas_manhattan_C) = c("SNP","CHR","BP","P")
+
+# Make the general GWAS
+# dir.create("graphs/Breast_GWAS")
+
+png("graphs/Breast_GWAS/70_general_breast.png")
+manhattan(gwas_manhattan_C)
+title("Breast samples")
+dev.off()
+
+# Loop to make the plots
+
+for (c in chromosomes){
+  png(paste0("graphs/Breast_GWAS/70_Chr", c ,"_manhattan_breast.png"))
+  manhattan(gwas_manhattan_C %>% filter(CHR == as.integer(c)))
+  dev.off()
+}
+
+# check the correlated
+breast_variants2 = gwas_B_70 %>% filter(P<1e-6) ## threshold Sugestivo
+dim(breast_variants2) #297
+
+
+# COLON ANALYSIS # 
+# we want now analyze by Colon
+system(paste0(" /imppc/labs/dnalab/share/PRS/03_GCAT_subset_variants_imputed/plink2 ",
+              " --pgen /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.pgen ",
+              " --pvar /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.pvar ",
+              " --psam /imppc/labs/dnalab/share/PRS/05_GWAS/outputs_plink/first_final_subset.psam ",
+              " --pheno-name colon_70 ",
+              " --glm firth ", # help to order the betas to take into account not balanced cases
+              " --maf 0.01 ", 
+              " --out /imppc/labs/dnalab/share/PRS/06_GWAS/outputs_plink/first_final_subset"))
+
+gwas_C_70 = fread("/imppc/labs/dnalab/share/PRS/06_GWAS/outputs_plink/first_final_subset.colon_70.glm.firth")
+
+head(gwas_C_70)
+
+# Create the gwas_manhattan with the columns we need 
+gwas_manhattan_C = gwas_C_70 %>% dplyr::select(ID,`#CHROM`,POS,P)
+# Change the columns name
+colnames(gwas_manhattan_C) = c("SNP","CHR","BP","P")
+
+# Make the general GWAS
+# dir.create("graphs/Colon_GWAS")
+
+png("graphs/Colon_GWAS/70_general_colon.png")
+manhattan(gwas_manhattan_C)
+title("Colon samples")
+dev.off()
+
+# Loop to make the plots
+
+for (c in chromosomes){
+  png(paste0("graphs/Colon_GWAS/70_Chr", c ,"_manhattan_colon.png"))
+  manhattan(gwas_manhattan_C %>% filter(CHR == as.integer(c)))
+  dev.off()
+}
+
+# check the correlated
+colon_variants2 = gwas_C_70 %>% filter(P<1e-6)
+dim(colon_variants2) # 91, in the previous case (100%) we have 153
+
+
+## Search the information of this selected SNPs with the Training data set (70%) ##
+
+genes_information = fread("/imppc/labs/dnalab/share/PRS/02_Pandora_data_preparation/panels.txt")
+genes_information = genes_information[,1:2]
+head(genes_information)
+
+# Create a common variable chr_pos
+general_variants2$chr_pos = paste0(general_variants2$`#CHROM`, "_", general_variants2$POS)
+ovarian_variants2$chr_pos = paste0(ovarian_variants2$`#CHROM`, "_", ovarian_variants2$POS)
+breast_variants2$chr_pos = paste0(breast_variants2$`#CHROM`, "_", breast_variants2$POS)
+colon_variants2$chr_pos = paste0(colon_variants2$`#CHROM`, "_", colon_variants2$POS)
+
+# Check
+
+length(general_variants2$chr_pos) - length(which(general_variants2$chr_pos %in% genes_information$chr_pos)) ### 2 IVAN
+which(!general_variants2$chr_pos %in% genes_information$chr_pos) # 95 126
+
+length(ovarian_variants2$chr_pos) - length(which(ovarian_variants2$chr_pos %in% ovarian_variants2$chr_pos))
+which(!ovarian_variants2$chr_pos %in% genes_information$chr_pos) # NO
+
+length(breast_variants2$chr_pos) - length(which(breast_variants2$chr_pos %in% breast_variants2$chr_pos))
+which(!breast_variants2$chr_pos %in% genes_information$chr_pos) # 79 101
+
+length(colon_variants2$chr_pos) - length(which(colon_variants2$chr_pos %in% colon_variants2$chr_pos))
+which(!colon_variants2$chr_pos %in% genes_information$chr_pos) # NO
+
+
+# Create the gene variable
+general_variants2$Gene = NA
+ovarian_variants2$Gene = NA
+breast_variants2$Gene = NA
+colon_variants2$Gene = NA
+
+## GENERAL GENE SEARCHING ##
+
+sel = which(general_variants2$chr_pos %in% genes_information$chr_pos)# Select the common
+for (i in sel){
+  print(i)
+  chrpos = general_variants2[i,]$chr_pos
+  general_variants2[i,]$Gene = unique(genes_information[which(genes_information$chr_pos == chrpos),]$Gene)
+}
+
+# Check and manual fill GENERAL VARIANTS
+general_variants2[which(is.na(general_variants2$Gene)),]$chr_pos # "5_60240986"  "7_142457132"
+
+# Search gene
+gene = unique(genes_information[which(genes_information$chr_pos > "5_60000000"&
+                                        genes_information$chr_pos < "5_61000000"),]$Gene)
+# Substitute
+general_variants2[which(general_variants2$chr_pos == "5_60240986"),]$Gene = gene
+
+# Search gene
+gene = unique(genes_information[which(genes_information$chr_pos > "7_142400000"&
+                                        genes_information$chr_pos < "7_142500000"),]$Gene)
+# Substitute
+general_variants2[which(general_variants2$chr_pos == "7_142457132"),]$Gene = gene
+
+
+## OVARIAN GENE SEARCHING ##
+
+sel = which(ovarian_variants2$chr_pos %in% genes_information$chr_pos)# Select the common
+for (i in sel){
+  print(i)
+  chrpos = ovarian_variants2[i,]$chr_pos
+  ovarian_variants2[i,]$Gene = unique(genes_information[which(genes_information$chr_pos == chrpos),]$Gene)
+}
+
+# Check and manual fill
+ovarian_variants2[which(is.na(ovarian_variants2$Gene)),]$chr_pos # NO
+
+## BREAST GENE SEARCHING ##
+
+sel = which(breast_variants2$chr_pos %in% genes_information$chr_pos)# Select the common
+for (i in sel){
+  print(i)
+  chrpos = breast_variants2[i,]$chr_pos
+  breast_variants2[i,]$Gene = unique(genes_information[which(genes_information$chr_pos == chrpos),]$Gene)
+}
+
+# Check and manual fill
+breast_variants2[which(is.na(breast_variants2$Gene)),]$chr_pos # "5_60240986"  "7_142457132"
+
+# Search gene
+gene = unique(genes_information[which(genes_information$chr_pos > "5_60200000"&
+                                        genes_information$chr_pos < "5_60300000"),]$Gene)
+# Substitute
+breast_variants2[which(breast_variants2$chr_pos == "5_60240986"),]$Gene = gene
+
+# Search gene
+gene = unique(genes_information[which(genes_information$chr_pos > "7_142400000"&
+                                        genes_information$chr_pos < "7_142500000"),]$Gene)
+# Substitute
+breast_variants2[which(breast_variants2$chr_pos == "7_142457132"),]$Gene = gene
+
+## COLON GENE SEARCHING ##
+
+sel = which(colon_variants2$chr_pos %in% genes_information$chr_pos)# Select the common
+for (i in sel){
+  print(i)
+  chrpos = colon_variants2[i,]$chr_pos
+  colon_variants2[i,]$Gene = unique(genes_information[which(genes_information$chr_pos == chrpos),]$Gene)
+}
+
+# Check and manual fill
+colon_variants2[which(is.na(colon_variants$Gene)),]$chr_pos # NO
+
+
+# Venn diagram
+png("graphs/70_VennDiagram.png")
+grid.newpage()
+draw.triple.venn(area1 = length(unique(ovarian_variants2$Gene)), # Ovarian
+                 area2 = length(unique(breast_variants2$Gene)),  # Breast
+                 area3 = length(unique(colon_variants2$Gene)), # Colon
+                 n12 = length(intersect(ovarian_variants2$Gene,breast_variants2$Gene)), #Ovarian vs Breast
+                 n23 = length(intersect(breast_variants2$Gene,colon_variants2$Gene)), #Breast vs Colon
+                 n13 = length(intersect(ovarian_variants2$Gene,colon_variants2$Gene)),  # Ovarian vs Colon
+                 n123 = length(intersect(intersect(ovarian_variants2$Gene,breast_variants2$Gene),colon_variants2$Gene)), # ALL 
+                 category = c("Ovarian 70%", "Breast 70%", "Colon 70%"), # cancer types
+                 lty = "dotted", lwd = 1, alpha = 0.3, 
+                 cat.col = c("blue", "aquamarine3", "blueviolet"),
+                 fill = c("blue", "aquamarine", "blueviolet"), scaled  = TRUE)
+dev.off()
+
+
+# Save the variants
+general_variants2 %>% write.table("70_general_variants.txt",
+                                 row.names = F,col.names = F,quote = F)
+ovarian_variants2 %>% write.table("70_ovarian_variants.txt",
+                                 row.names = F,col.names = F,quote = F)
+breast_variants2 %>% write.table("70_breast_variants.txt",
+                                row.names = F,col.names = F,quote = F)
+colon_variants2 %>% write.table("70_colon_variants.txt",
+                               row.names = F,col.names = F,quote = F)
