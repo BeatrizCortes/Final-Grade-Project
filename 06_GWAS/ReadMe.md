@@ -63,14 +63,14 @@ We repeat the GWAS with this 70% subset that means we have the following samples
 ![Venn Diagram](graphs/70_VennDiagram.png)
 
 
-This table summarize the correlated SNPs and genes information with this analysis we made:
+This table summarize the correlated SNPs and genes information with this analysis we made, we use a suggestive threshold for the P value (P < 1e-6):
 
 |         | Correlated SNPs 100% | Correlated genes 100% | Correlated SNPs 70% | Correlated genes 70% |
 |:-------:|:--------------------:|:---------------------:|---------------------|----------------------|
-| General |          412         |          101          | 323                 | 92                   |
-| Ovarian |          188         |           74          | 139                 | 63                   |
-|  Breast |          318         |           94          | 248                 | 81                   |
-|  Colon  |          153         |           69          | 91                  | 49                   |
+| General |          412         |          101          | 373                 | 97                   |
+| Ovarian |          188         |           74          | 169                 | 70                   |
+|  Breast |          318         |           94          | 297                 | 92                   |
+|  Colon  |          153         |           69          | 124                 | 56                   |
 
 Manhattan plots with teh training dataset:
 
