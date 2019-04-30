@@ -72,7 +72,7 @@ This table summarize the correlated SNPs and genes information with this analysi
 |  Breast |          318         |           94          | 297                 | 92                   |
 |  Colon  |          153         |           69          | 124                 | 56                   |
 
-*** Posible solution: an explanation can be that the rare variants get lost when we decrease the N, a posible solution can be make different samples of 70% and repeat the analysis. 
+*** Posible solution: an explanation can be that we lost statistical power, but also the rare variants get lost when we decrease the N, a posible solution can be make different samples of 70% and repeat the analysis. 
 
 Manhattan plots with teh training dataset:
 
