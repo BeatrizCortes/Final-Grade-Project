@@ -4,7 +4,7 @@ A repository where I will include all the scripts used during the development of
 <br/>
 
 1. **First data visualization**
-   *In this section we check the primary information we had about the variants contained in Pandora: maf, common variants with the available datasets, info of the common variants, differenciation of populations capacity of this variants...* 
+   *In this section we check the primary information we had about the variants contained in Pandora: maf, common variants with the available datasets, info of the common variants, differentiation of populations capacity of this variants...* 
    
    <br/>
    
@@ -28,9 +28,12 @@ A repository where I will include all the scripts used during the development of
 5. **GWAS Preparation** 
   *In this section we will check the data to see if it is correct. We check GCAT and Pandora data and check also the differences between the frequences of the selected SNPs.
   
+     <br/>
+  
   6. **GWAS**
   *We divide the data in two sets: training 70% of the samples and the test 30% of the samples. We perform the GWS for the four groups and the training set and select the correlated SNPs and check the number of genes it contain.
   
+     <br/>  
   
   7. **PRS**
   *We want to calculate predictive models with the selected SNPs as correlated for each of the cancer groups. We obtain boxplots, densityplots, contingency tables, AUC, sensitivity and specificity for each group.*
