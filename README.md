@@ -26,12 +26,12 @@ A repository where I will include all the scripts used during the development of
    <br/>
 
 5. **GWAS Preparation** 
-  *In this section we will check the data to see if it is correct. We check GCAT and Pandora data and check also the differences between the frequences of the selected SNPs.
+  *In this section we will check the data to see if it is correct. We check GCAT and Pandora data and check also the differences between the frequences of the selected SNPs.*
   
      <br/>
   
   6. **GWAS**
-  *We divide the data in two sets: training 70% of the samples and the test 30% of the samples. We perform the GWS for the four groups and the training set and select the correlated SNPs and check the number of genes it contain.
+    *We divide the data into two sets: training 70% of the samples and the test 30% of the samples. We perform the GWS for the four groups and the training set and select the correlated SNPs and check the number of genes it contain.*
   
      <br/>  
   
