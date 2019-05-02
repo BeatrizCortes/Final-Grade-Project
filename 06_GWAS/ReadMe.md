@@ -22,10 +22,10 @@ We have 4 different cathegories:
 Then we perform 4 different GWAS one with each group, and made Manhattan plots in order to visualize it. 
 
 We obtain the following correlated SNPs:
-- **pheno**: 412 SNPs belonging to 101 genes. 
-- **ovarian**: 188 SNPs belonging to 74 genes.
-- **breast**: 318 SNPs belonging to 94 genes.
-- **colon**: 153 SNPs belonging to 69 genes. 
+- **pheno**: 385 SNPs belonging to 97 genes. 
+- **ovarian**: 169 SNPs belonging to 70 genes.
+- **breast**: 297 SNPs belonging to 92 genes.
+- **colon**: 124 SNPs belonging to 56 genes. 
 
 ![General GWAS](graphs/general.png)
 
