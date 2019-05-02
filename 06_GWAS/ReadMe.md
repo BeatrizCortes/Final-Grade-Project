@@ -64,7 +64,7 @@ This table shows the number of case and controls for each group of cancer and th
 
 |         | Case (70%) | Control (70%) | Case (30%) | Control (30%) |
 |:-------:|:----------:|:-------------:|------------|---------------|
-| General |     943    |      3655     | 432        | 1539          |
+| General |     943    |      3515     | 432        | 1539          |
 | Ovarian |     295    |      3506     | 129        | 1482          |
 |  Breast |     584    |      3492     | 247        | 1496          |
 |  Colon  |     219    |      3489     | 100        | 1499          |
