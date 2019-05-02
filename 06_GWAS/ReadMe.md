@@ -1,5 +1,5 @@
 
-## 06. GWAS                                                               
+## 06. GWAS PREPARATION                                                               
 
 First we had to modify the psam file to add the information of control/case for each cancer type. 
 
@@ -113,7 +113,9 @@ Chromosome 2, for Colon Cancer:
 ![Colon 70 GWAS, chromosme 2](graphs/70_Chr2_manhattan_colon.png)
 
 
+**IMPORTANT:**
 
+Correlated variants information in: <group>_variants2.txt 
 
 
 
