@@ -58,7 +58,9 @@ With a difference higher than 0.2 we found 451 variants, only the previous one c
 
 Then we search about the number of observations of each of this 451 variants, we found that 88 variants observed in less than 100 individuals. So, we decided to filter this variants. 
 
-**We still have 13718 variants**
+We use *filter(OBS_CT_PANDORA > (90x3162/100))* to filter all the variants with less than 90% observations.
+
+We also filter the differences in the frequencies between Pandora and GCAT higher than 0.2.
 
 We again saw the differences between GCAT and Pandora with this variants filtered, the result was very similar. 
 
@@ -75,6 +77,8 @@ Now check the selected variables with a PCA:
 And also check a diff < 0.01 filter and results were very similar:
 
 ![Histogram](graphs/pca2_001.png)
+
+**Finaly: we have *first_final_subset* in PLINK format containing 13023 variants and 6569 samples.
 
 
 ### Additional information about the classifications:
