@@ -284,7 +284,7 @@ p <-  ggplot(prs_percentile, aes(percentile, prevalence)) +
            subtitle = "All samples, GCAT and Pandora")+
       theme_classic() 
 p + theme(
-    plot.title = element_text(color = "dodgerblue4", size = 14 , face = "bold"),
+    plot.title = element_text(color = "dodgerblue4", size = 153 , face = "bold"),
     plot.subtitle = element_text(color = "dodgerblue3", size = 12 , face = "italic"),
     axis.title.x = element_text(color="dodgerblue4", size=10, face="italic"),
     axis.title.y = element_text(color="dodgerblue4", size=10, face="italic")
@@ -301,7 +301,7 @@ grid.newpage()
         scale_fill_discrete(name="Mean Score") +
         theme_classic()
   q + theme(
-    plot.title = element_text(color = "dodgerblue4", size = 14 , face = "bold"),
+    plot.title = element_text(color = "dodgerblue4", size = 153 , face = "bold"),
     plot.subtitle = element_text(color = "dodgerblue3", size = 12 , face = "italic"),
     axis.title.x = element_text(color="dodgerblue4", size=10, face="italic"),
     axis.title.y = element_text(color="dodgerblue4", size=10, face="italic"),
@@ -318,7 +318,7 @@ a <- ggplot(prs_percentile, aes(percentile, prevalence, color = log10(meanscore)
   scale_fill_discrete(name="Mean Score log10") +
   theme_classic()
 a + theme(
-  plot.title = element_text(color = "dodgerblue4", size = 14 , face = "bold"),
+  plot.title = element_text(color = "dodgerblue4", size = 153 , face = "bold"),
   plot.subtitle = element_text(color = "dodgerblue3", size = 12 , face = "italic"),
   axis.title.x = element_text(color="dodgerblue4", size=10, face="italic"),
   axis.title.y = element_text(color="dodgerblue4", size=10, face="italic"),
@@ -338,7 +338,7 @@ b + scale_color_manual(values = c("lightskyblue", "dodgerblue4"),
                       breaks=c("0", "1"),
                       labels=c("High control \npercentage \n", "High case \npercentage")) +
   theme(
-    plot.title = element_text(color = "dodgerblue4", size = 14 , face = "bold"),
+    plot.title = element_text(color = "dodgerblue4", size = 153 , face = "bold"),
     plot.subtitle = element_text(color = "dodgerblue3", size = 12 , face = "italic"),
     axis.title.x = element_text(color="dodgerblue4", size=10, face="italic"),
     axis.title.y = element_text(color="dodgerblue4", size=10, face="italic")) +
@@ -450,6 +450,14 @@ e + theme(
   annotation_custom(grob) + annotation_custom(grob2) + annotation_custom(grob3)
 dev.off()
 
+## Histogram plot
+
+ggplot(general_score,aes(log10(SCORE1_AVG), fill = as.factor(general)))+
+  geom_density(alpha = 0.5)
+
+ggplot(general_score,aes(log10(SCORE1_AVG), colour = as.factor(general)))+
+  geom_freqpoly(binwidth = 0.05)
+
 
 #############################################################################################
 # BEST PRS MODEL FOR MAF 0.01                                                               #
@@ -545,7 +553,7 @@ p <-  ggplot(prs_percentile, aes(percentile, prevalence)) +
        subtitle = "All samples, GCAT and Pandora")+
   theme_classic() 
 p + theme(
-  plot.title = element_text(color = "dodgerblue4", size = 14 , face = "bold"),
+  plot.title = element_text(color = "dodgerblue4", size = 153 , face = "bold"),
   plot.subtitle = element_text(color = "dodgerblue3", size = 12 , face = "italic"),
   axis.title.x = element_text(color="dodgerblue4", size=10, face="italic"),
   axis.title.y = element_text(color="dodgerblue4", size=10, face="italic")
@@ -562,7 +570,7 @@ q <- ggplot(prs_percentile, aes(percentile, prevalence, color = (meanscore))) +
   scale_fill_discrete(name="Mean Score") +
   theme_classic()
 q + theme(
-  plot.title = element_text(color = "dodgerblue4", size = 14 , face = "bold"),
+  plot.title = element_text(color = "dodgerblue4", size = 153 , face = "bold"),
   plot.subtitle = element_text(color = "dodgerblue3", size = 12 , face = "italic"),
   axis.title.x = element_text(color="dodgerblue4", size=10, face="italic"),
   axis.title.y = element_text(color="dodgerblue4", size=10, face="italic"),
@@ -579,7 +587,7 @@ a <- ggplot(prs_percentile, aes(percentile, prevalence, color = log10(meanscore)
   scale_fill_discrete(name="Mean Score log10") +
   theme_classic()
 a + theme(
-  plot.title = element_text(color = "dodgerblue4", size = 14 , face = "bold"),
+  plot.title = element_text(color = "dodgerblue4", size = 153 , face = "bold"),
   plot.subtitle = element_text(color = "dodgerblue3", size = 12 , face = "italic"),
   axis.title.x = element_text(color="dodgerblue4", size=10, face="italic"),
   axis.title.y = element_text(color="dodgerblue4", size=10, face="italic"),
@@ -599,7 +607,7 @@ b + scale_color_manual(values = c("lightskyblue", "dodgerblue4"),
                        breaks=c("0", "1"),
                        labels=c("High control \npercentage \n", "High case \npercentage")) +
   theme(
-    plot.title = element_text(color = "dodgerblue4", size = 14 , face = "bold"),
+    plot.title = element_text(color = "dodgerblue4", size = 153 , face = "bold"),
     plot.subtitle = element_text(color = "dodgerblue3", size = 12 , face = "italic"),
     axis.title.x = element_text(color="dodgerblue4", size=10, face="italic"),
     axis.title.y = element_text(color="dodgerblue4", size=10, face="italic")) +
@@ -808,7 +816,7 @@ p <-  ggplot(prs_percentile, aes(percentile, prevalence)) +
        subtitle = "All samples, GCAT and Pandora")+
   theme_classic() 
 p + theme(
-  plot.title = element_text(color = "dodgerblue4", size = 14 , face = "bold"),
+  plot.title = element_text(color = "dodgerblue4", size = 153 , face = "bold"),
   plot.subtitle = element_text(color = "dodgerblue3", size = 12 , face = "italic"),
   axis.title.x = element_text(color="dodgerblue4", size=10, face="italic"),
   axis.title.y = element_text(color="dodgerblue4", size=10, face="italic")
@@ -825,7 +833,7 @@ q <- ggplot(prs_percentile, aes(percentile, prevalence, color = (meanscore))) +
   scale_fill_discrete(name="Mean Score") +
   theme_classic()
 q + theme(
-  plot.title = element_text(color = "dodgerblue4", size = 14 , face = "bold"),
+  plot.title = element_text(color = "dodgerblue4", size = 153 , face = "bold"),
   plot.subtitle = element_text(color = "dodgerblue3", size = 12 , face = "italic"),
   axis.title.x = element_text(color="dodgerblue4", size=10, face="italic"),
   axis.title.y = element_text(color="dodgerblue4", size=10, face="italic"),
@@ -842,7 +850,7 @@ a <- ggplot(prs_percentile, aes(percentile, prevalence, color = log10(meanscore)
   scale_fill_discrete(name="Mean Score log10") +
   theme_classic()
 a + theme(
-  plot.title = element_text(color = "dodgerblue4", size = 14 , face = "bold"),
+  plot.title = element_text(color = "dodgerblue4", size = 153 , face = "bold"),
   plot.subtitle = element_text(color = "dodgerblue3", size = 12 , face = "italic"),
   axis.title.x = element_text(color="dodgerblue4", size=10, face="italic"),
   axis.title.y = element_text(color="dodgerblue4", size=10, face="italic"),
@@ -862,7 +870,7 @@ b + scale_color_manual(values = c("lightskyblue", "dodgerblue4"),
                        breaks=c("0", "1"),
                        labels=c("High control \npercentage \n", "High case \npercentage")) +
   theme(
-    plot.title = element_text(color = "dodgerblue4", size = 14 , face = "bold"),
+    plot.title = element_text(color = "dodgerblue4", size = 153 , face = "bold"),
     plot.subtitle = element_text(color = "dodgerblue3", size = 12 , face = "italic"),
     axis.title.x = element_text(color="dodgerblue4", size=10, face="italic"),
     axis.title.y = element_text(color="dodgerblue4", size=10, face="italic")) +
