@@ -82,7 +82,31 @@ We visualize the predictive power of each of this selected models with the follo
 ![plot6](graphs/0001_scoreincrease_bygroup.png)
 
 
+### maf by group
 
+#### Ovarian
+![plot](graphs/005_density_ovarian.png)
+![plot2](graphs/005_prevalence_percentile_ovarian.png)
+![plot3](graphs/005_prevalence_percentile_colorbyscore_ovarian.png)
+![plot4](graphs/005_prevalence_percentile_colorbyscore_log10_ovarian.png)
+![plot5](graphs/005_scoreincrease_bygroup_ovarian.png)
+![plot6](graphs/005_scoreincrease_bygroup_ovarian.png)
+
+#### Breast
+![plot](graphs/005_density_breast.png)
+![plot2](graphs/005_prevalence_percentile_breast.png)
+![plot3](graphs/005_prevalence_percentile_colorbyscore_breast.png)
+![plot4](graphs/005_prevalence_percentile_colorbyscore_log10_breast.png)
+![plot5](graphs/005_scoreincrease_bygroup_breast.png)
+![plot6](graphs/005_scoreincrease_bygroup_breast.png)
+
+#### Colon
+![plot](graphs/005_density_colon.png)
+![plot2](graphs/005_prevalence_percentile_colon.png)
+![plot3](graphs/005_prevalence_percentile_colorbyscore_colon.png)
+![plot4](graphs/005_prevalence_percentile_colorbyscore_log10_colon.png)
+![plot5](graphs/005_scoreincrease_bygroup_colon.png)
+![plot6](graphs/005_scoreincrease_bygroup_colon.png)
 
 
 
