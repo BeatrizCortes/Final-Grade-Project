@@ -26,7 +26,8 @@ With a loop we explore different variables in order to obtain the best model to 
   - classification_threshold > 0.5 considered as case
   - classification_threshold > 0.55 considered as case
   
-  | MAF_cases | p_value_threshold | LD_pruning | classification_threshold | N_snps |  sensitivity |  specificity |      AUC     |
+  
+| MAF_cases | p_value_threshold | LD_pruning | classification_threshold | N_snps |  sensitivity |  specificity |      AUC     |
 |:---------:|:-----------------:|:----------:|:------------------------:|:------:|:------------:|:------------:|:------------:|
 |    0,05   |      0,000001     |     YES    |           0,07           |   41   |  0,900462963 | 0,9775967413 |  0,946402834 |
 |    0,05   |       0,0001      |     YES    |           0,07           |   46   | 0,8981481481 |  0,978275628 | 0,9470899471 |
