@@ -26,11 +26,11 @@ We also check other 3 thresholds:
 
 *Table 1. False positives and Cancers categorized as health in the three models.*
 
-|            | False positive (%) | Cancers as healthy (%) for 27 individuals | Ovarian/Breast/Colon cancer as health (%) from 10 individuals |   |
-|:----------:|:------------------:|:-----------------------------------------:|:-------------------------------------------------------------:|:-:|
-|  Model 005 |    2,2403258656    |                    100                    |                              100                              |   |
-|  Model 001 |    4,0733197556    |                    100                    |                              100                              |   |
-| Model 0001 |    5,9742023082    |                    100                    |                              100                              |   |
+|            | False positive (%) | Cancers as healthy (%) for 27 individuals | Ovarian/Breast/Colon cancer as health (%) from 10 individuals |
+|:----------:|:------------------:|:-----------------------------------------:|:-------------------------------------------------------------:|
+|  Model 005 |    2,2403258656    |                    100                    |                              100                              |
+|  Model 001 |    4,0733197556    |                    100                    |                              100                              |
+| Model 0001 |    5,9742023082    |                    100                    |                              100                              |
 
 We want to center the investigation in hereditary and familiar cancer so, we check hpw many of this 27 cancer patients have Ovarian, Breast or Colon cancer, and there are 10. From this 10 individuals 5 of them have familiar antecedents:
 
