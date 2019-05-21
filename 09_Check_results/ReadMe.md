@@ -81,7 +81,20 @@ Finally we create two tables with the information of all Genes **genes_inPRS_all
 | ...   | ...        | ...      | ...            | ...          | ...      | ...          | ...          | ...               | ...    | ...     | ...                      | ...              | ...          | ...         | ...         | ...      | ...     | ...                    | ...   | ...      | ...      | ... | ...      | ...       | ...      | ...      |
 
 
+### Summary:
+70% of GCAT - Training set: total 3515 individuals:
 
+- 1574 have each type of cancer or antecedents.
+- 582 have Ovarian, Breast or Colon cancer or antecedents. 
+- 66 have any type of cancer, of this 66, 31 have antecedents.
+
+30% of GCAT - Test set: total 1473 individuals:
+
+- 666 have each type of cancer or antecedents.
+- 221 have Ovarian, Breast or Colon cancer or antecedents. 
+- 37 have any type of cancer, of this 37, 23 have antecedents.
+
+We suppose that GCAT is health population but it is not. GCAT is general population with different kind of diseases. 
 
 
 
