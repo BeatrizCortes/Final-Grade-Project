@@ -79,9 +79,9 @@ Finally we create two tables with the information of all Genes **genes_inPRS_all
 *Table 4. Individuals with Ovarian, Breast or Colon cancer and Cancer antecedents of 70%.*
 
 | Gender | Patient cancer type | Familiar | Familiar cancer type | Familiar | Familiar cancer type |
-|:------:|:-------------------:|:--------:|:--------------------:|----------|----------------------|
-|  Women |     Breast (x3)     |  Parents |        Breast        | Brother  | Breast               |
-|  Women |        Breast       |  Parents |        Breast        |          |                      |
+|:------:|:-------------------:|:--------:|:--------------------:|:--------:|:--------------------:|
+|  Women |     Breast (x3)     |  Parents |        Breast        |  Brother |        Breast        |
+|  Women |        Breast       |  Parents |        Breast        |     -    |           -          |
 
 30% of GCAT - Test set: total 1473 individuals:
 
