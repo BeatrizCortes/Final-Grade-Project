@@ -32,19 +32,7 @@ We also check other 3 thresholds:
 |  Model 001 |    4,0733197556    |                    100                    |                              100                              |
 | Model 0001 |    5,9742023082    |                    100                    |                              100                              |
 
-We want to center the investigation in hereditary and familiar cancer so, we check hpw many of this 27 cancer patients have Ovarian, Breast or Colon cancer, and there are 10. From this 10 individuals 5 of them have familiar antecedents:
-
-*Table 2. Individuals with Ovarian, Breast or Colon cancer and Cancer antecedents.*
-
-| Gender | Patient cancer type | Familiar | Familiar cancer type |
-|:------:|:-------------------:|:--------:|:--------------------:|
-|   Men  |  Bladder and **Colon**  |  **Parents** |         **Colon**        |
-|  Women |        **Breast**       |  **Parents** |        **Breast**        |
-|  Women |        Breast       |  Parents |        Bladder       |
-|  Women |        Breast       |  Parents |       Prostate       |
-|  Women |        Breast       |  Brother |        Bladder       |
-
-The two first are posible hereditary or familiar cancer. 
+We want to center the investigation in hereditary and familiar cancer so, we check hpw many of this 27 cancer patients have Ovarian, Breast or Colon cancer, and there are 10. From this 10 individuals 5 of them have familiar antecedents.
 
 Then we check the bad classified individuals (classified as cases) to check their antecedents for the three selected models.
 
@@ -58,7 +46,7 @@ We also check the maf of each of the models.
 
 Finally we create two tables with the information of all Genes **genes_inPRS_allmodels.xlsx** and SNPs **SNPs_inPRS_allmodels.xlsx** indicating for which models them belong. 
 
-*Table 3. All genes in the models information.*
+*Table 2. All genes in the models information.*
 
 |  Gene | Chromosome |  Position |        ID       | P            | OR       | A1_CASE_FREQ | A1_CTRL_FREQ | CI                | Breast | Ovarian | CMOH: Ovarian and Breast | Poliposis: Colon | CCHNP: Colon | Young Colon | Li-Fraumeni | Melanoma | Gastric | Erdhein Chester: Blood | Renal | Pancreas | Prostate | AHG | GWAS_PRS | model0001 | model001 | model005 |
 |:-----:|:----------:|:---------:|:---------------:|--------------|----------|--------------|--------------|-------------------|--------|---------|--------------------------|------------------|--------------|-------------|-------------|----------|---------|------------------------|-------|----------|----------|-----|----------|-----------|----------|----------|
@@ -69,7 +57,7 @@ Finally we create two tables with the information of all Genes **genes_inPRS_all
 |  ...  |     ...    |    ...    |       ...       | ...          | ...      | ...          | ...          | ...               | ...    | ...     | ...                      | ...              | ...          | ...         | ...         | ...      | ...     | ...                    | ...   | ...      | ...      | ... | ...      | ...       | ...      | ...      |
 
 
-*Table 4. All SNPs in the models information.*
+*Table 3. All SNPs in the models information.*
 
 | Gene  | Chromosome | Position | ID             | P            | OR       | A1_CASE_FREQ | A1_CTRL_FREQ | CI                | Breast | Ovarian | CMOH: Ovarian and Breast | Poliposis: Colon | CCHNP: Colon | Young Colon | Li-Fraumeni | Melanoma | Gastric | Erdhein Chester: Blood | Renal | Pancreas | Prostate | AHG | GWAS_PRS | model0001 | model001 | model005 |
 |-------|:----------:|---------:|----------------|--------------|----------|--------------|--------------|-------------------|--------|---------|--------------------------|------------------|--------------|-------------|-------------|----------|---------|------------------------|-------|----------|----------|-----|----------|-----------|----------|----------|
@@ -84,17 +72,32 @@ Finally we create two tables with the information of all Genes **genes_inPRS_all
 ### Summary:
 70% of GCAT - Training set: total 3515 individuals:
 
-- 1574 have each type of cancer or antecedents.
+- 1574 have any type of cancer or antecedents.
 - 582 have Ovarian, Breast or Colon cancer or antecedents. 
 - 66 have any type of cancer, of this 66, 31 have antecedents.
 
+*Table 4. Individuals with Ovarian, Breast or Colon cancer and Cancer antecedents of 70%.*
+
+| Gender | Patient cancer type | Familiar | Familiar cancer type | Familiar | Familiar cancer type |
+|:------:|:-------------------:|:--------:|:--------------------:|----------|----------------------|
+|  Women |     Breast (x3)     |  Parents |        Breast        | Brother  | Breast               |
+|  Women |        Breast       |  Parents |        Breast        |          |                      |
+
 30% of GCAT - Test set: total 1473 individuals:
 
-- 666 have each type of cancer or antecedents.
+- 666 have any type of cancer or antecedents.
 - 221 have Ovarian, Breast or Colon cancer or antecedents. 
 - 37 have any type of cancer, of this 37, 23 have antecedents.
 
-We suppose that GCAT is health population but it is not. GCAT is general population with different kind of diseases. 
+*Table 5. Repeated. Individuals with Ovarian, Breast or Colon cancer and Cancer antecedents of 30%.*
 
+| Gender | Patient cancer type | Familiar | Familiar cancer type |
+|:------:|:-------------------:|:--------:|:--------------------:|
+|   Men  |  Bladder and **Colon**  |  **Parents** |         **Colon**        |
+|  Women |        **Breast**       |  **Parents** |        **Breast**        |
+|  Women |        Breast       |  Parents |        Bladder       |
+|  Women |        Breast       |  Parents |       Prostate       |
+|  Women |        Breast       |  Brother |        Bladder       |
 
+The two first are posible hereditary or familiar cancer. 
 
