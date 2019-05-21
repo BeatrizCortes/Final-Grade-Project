@@ -72,9 +72,9 @@ Finally we create two tables with the information of all Genes **genes_inPRS_all
 ### Summary:
 70% of GCAT - Training set: total 3515 individuals:
 
-- 1574 have any type of cancer or antecedents.
-- 582 have Ovarian, Breast or Colon cancer or antecedents. 
-- 66 have any type of cancer, of this 66, 31 have antecedents.
+- 1574 have any type of cancer or antecedents (44.78%).
+- 582 have Ovarian, Breast or Colon cancer or antecedents (16.56%). 
+- 66 have any type of cancer (1.88%), of this 66, 31 have antecedents (0.88%).
 
 *Table 4. Individuals with Ovarian, Breast or Colon cancer and Cancer antecedents of 70%.*
 
@@ -83,13 +83,15 @@ Finally we create two tables with the information of all Genes **genes_inPRS_all
 |  Women |     Breast (x3)     |  Parents |        Breast        |  Brother |        Breast        |
 |  Women |        Breast       |  Parents |        Breast        |     -    |           -          |
 
+This 2 individuals are the 0.06% of the training set. 
+
 30% of GCAT - Test set: total 1473 individuals:
 
-- 666 have any type of cancer or antecedents.
-- 221 have Ovarian, Breast or Colon cancer or antecedents. 
-- 37 have any type of cancer, of this 37, 23 have antecedents.
+- 666 have any type of cancer or antecedents (45.21%).
+- 221 have Ovarian, Breast or Colon cancer or antecedents (15.00%). 
+- 37 have any type of cancer (2.51%), of this 37, 23 have antecedents (1.56%).
 
-*Table 5. Repeated. Individuals with Ovarian, Breast or Colon cancer and Cancer antecedents of 30%.*
+*Table 5. Individuals with Ovarian, Breast or Colon cancer and Cancer antecedents of 30%.*
 
 | Gender | Patient cancer type | Familiar | Familiar cancer type |
 |:------:|:-------------------:|:--------:|:--------------------:|
@@ -99,5 +101,5 @@ Finally we create two tables with the information of all Genes **genes_inPRS_all
 |  Women |        Breast       |  Parents |       Prostate       |
 |  Women |        Breast       |  Brother |        Bladder       |
 
-The two first are posible hereditary or familiar cancer. 
+This 5 individuals are the 0.34% of the test set. The two first are posible hereditary or familiar cancer. 
 
