@@ -70,7 +70,7 @@ The variables it contain are the following, the most important are the bold:
 
 ## Data management
 
-We are going to focus only on the samples with tissue equal to blood and DNA (which contain the GCAT control samples), which means that from the 2628 total samples we are going to focus in 2142 belonging to these tissues. 
+We are going to focus only on the samples with tissue equal to blood and DNA (which contain the GCAT control samples), which means that from the 2628 total samples we are going to focus in 2449, 2242 blood and 207 "DNA", belonging to these tissues. 
 We also want to take into account another filter for the SNPs which is the **jointQualityScore**, that is a measure of quality, we consider valid data the ones with a lowest value than 4.
 
 So, we search in all.samples, all the 2628 samples the ones from Blood and then cross with all.vars and search the list correpondent to this **sampleId**. With this information of the variables we filter it with **jointQualityScore** > 4, and with a auxiliar function we obtain the genotypes from the **freq** variable. Finally, we keep the variables we are interested in: **sampleId**, **chr**, **start**, **end**, **refBase**, **altBase**, **uniqueVariantId** and **genotype.
